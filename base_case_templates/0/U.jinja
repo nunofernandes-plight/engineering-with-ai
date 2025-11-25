@@ -1,0 +1,13 @@
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform ({{ inlet_velocity_x }} 0 0); // Parametrized!
+
+boundaryField
+{
+    inlet
+    {
+        type            fixedValue;
+        value           uniform ({{ inlet_velocity_x }} 0 0); // Parametrized!
+    }
+    // ... rest of file
+}

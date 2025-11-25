@@ -16,6 +16,7 @@ WORKDIR /app
 
 # Copy our Python wrapper and our Template Simulation Case
 COPY ./wrapper_script.py /app/wrapper.py
+COPY ./ray_manager.py /app/ray_manager.py
 COPY ./base_case_templates /app/templates
 
 # Set the entrypoint to our Python script, not the shell
