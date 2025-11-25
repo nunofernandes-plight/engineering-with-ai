@@ -34,6 +34,22 @@ Run container:
 
 ```bash
 docker run --rm -v $(pwd)/base_case_templates:/app/templates engineering-with-ai:openfoam
+
+Run the included wrapper inside the container (it will render templates into /tmp/sim_case):
+
+```bash
+docker run --rm -v $(pwd)/base_case_templates:/app/templates engineering-with-ai:openfoam python3 /app/wrapper.py
+```
+
+You can also run the manager (if desired) from inside the image:
+
+```bash
+docker run --rm -v $(pwd)/base_case_templates:/app/templates engineering-with-ai:openfoam python3 /app/ray_manager.py
+```
+
+Template files
+---------------
+The repository ships an example template at `base_case_templates/0/U.jinja` using a simple Jinja2 variable `{{ inlet_velocity_x }}`. You can add more templates here and use the wrapper to render them as part of case setup.
 ```
 
 Notes:
