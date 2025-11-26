@@ -1,4 +1,4 @@
-#This structure separates code (Git) from heavy data (DVC/S3).
+# This structure separates code (Git) from heavy data (DVC/S3).
 
 my-platform-repo/
 ├── .dvc/                  <-- DVC Configuration (points to S3 bucket)
