@@ -1,0 +1,6 @@
+* Resistor-Capacitor Circuit Template
+V1 1 0 SIN(0 5 1k)
+R1 1 2 {{ resistance_val }}  ; Parametrized Resistor
+C1 2 0 {{ capacitance_val }} ; Parametrized Capacitor
+.tran 0.1ms 10ms
+.end
