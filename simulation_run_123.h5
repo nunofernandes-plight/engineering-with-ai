@@ -1,0 +1,17 @@
+/ (Root)
+├── metadata (JSON-string attribute)
+│   ├── solver: "OpenFOAM v2306"
+│   ├── user_id: "alex_design_eng"
+│   └── timestamp: "2023-10-27..."
+│
+├── global_context (Dataset)
+│   └── [10.5, 300.0, 1.2]  <-- [Inlet_Vel, Temp, Viscosity]
+│
+├── geometry (Group)
+│   ├── coords (Dataset): Shape (N, 3) <--- The Point Cloud (XYZ)
+│   └── connectivity (Dataset): Shape (2, M) <--- Adjacency List (Edge Index)
+│
+└── fields (Group)
+    ├── pressure (Dataset): Shape (N, 1) <--- Ground Truth Target
+    ├── velocity (Dataset): Shape (N, 3) <--- Ground Truth Target
+    └── boundary_mask (Dataset): Shape (N, 1) <--- 1=Wall, 2=Inlet, 0=Fluid
